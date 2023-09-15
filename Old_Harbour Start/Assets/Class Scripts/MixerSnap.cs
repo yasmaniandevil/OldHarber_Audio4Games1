@@ -8,17 +8,17 @@ public class MixerSnap : MonoBehaviour
 
     public AudioMixerSnapshot indoorSnap;
     public AudioMixerSnapshot outdoorSnap;
-
+    public float ChangeSecs;
 
     private void OnTriggerEnter(Collider other)
     {
-        indoorSnap.TransitionTo(0.5f);
+        indoorSnap.TransitionTo(ChangeSecs);
     }
 
 
     private void OnTriggerExit(Collider other)
     {
-        outdoorSnap.TransitionTo(0.5f);
+        outdoorSnap.TransitionTo(ChangeSecs);
     }
 }
 
