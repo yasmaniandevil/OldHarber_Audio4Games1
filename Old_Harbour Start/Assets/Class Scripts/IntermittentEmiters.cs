@@ -64,6 +64,7 @@ public class IntermittentEmiters : MonoBehaviour
 
         yield return new WaitForSeconds(Random.Range(minTime, maxTime));
         PlaySound();
+        Debug.Log("sound played" + audioFiles);
 
 
     }
